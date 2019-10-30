@@ -1,0 +1,10 @@
+def hellostring 
+task defineHello{	
+	println 'Please enter yout name: '
+	def name = System.in.newReader().readLine()
+	hellostring = "Hello $name!"	  
+}
+
+task hello(dependsOn: 'defineHello'){
+	println hellostring
+}
